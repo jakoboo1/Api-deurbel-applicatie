@@ -14,7 +14,7 @@ class Controller
     // Returns all Books
     public function lijst()
     {
-        $query = "SELECT * FROM bezoeken limit 10";
+        $query = "SELECT * FROM bezoeken ORDER BY ID DESC limit 10";
         $stm = $this->conn->prepare($query);
         
         if ($stm->execute()) {
